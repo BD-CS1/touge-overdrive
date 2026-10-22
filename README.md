@@ -40,3 +40,8 @@ Best times are stored only in browser `localStorage` under `touge-records-v1`, s
 ## Scope
 
 This is a lightweight browser racing simulation with stylized procedural 3D art, not a full tyre/suspension simulator. Car models and audio are original. AI is local; collisions use track-space bounds. There are no car brand licenses or borrowed film/anime music. Fullscreen/orientation support depends on the browser. The Canvas fallback trades detail and frame rate for compatibility and may run more slowly on weak devices.
+
+## GitHub Pages publication
+
+GitHub Pages publishes the `main` branch from `/(root)`. The root `index.html` forwards visitors to `dist/`, keeping the game's relative module and asset paths intact. `.nojekyll` disables Jekyll processing. Changes pushed to `main` are published by GitHub's built-in Pages pipeline. The separate `Validate TOUGE OVERDRIVE` Actions workflow runs syntax and physics/steering checks; its runner queue does not gate the branch publication. Find the canonical public website link in repository Settings → Pages.
+
