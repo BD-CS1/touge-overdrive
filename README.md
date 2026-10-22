@@ -1,5 +1,7 @@
 # TOUGE OVERDRIVE｜極速山嶺
 
+[Play online / 公開遊玩](https://bd-cs1.github.io/touge-overdrive/)
+
 An original, first-person, landscape mountain racing game. Three courses (dry dawn, wet midnight and fog), three fictional cars, seven AI rivals, race/time-attack modes, arcade driving assistance, drifting, collision damage, real rear-view camera and procedural Eurobeat/engine audio.
 
 ## Run and modify
@@ -43,5 +45,8 @@ This is a lightweight browser racing simulation with stylized procedural 3D art,
 
 ## GitHub Pages publication
 
-GitHub Pages publishes the `main` branch from `/(root)`. The root `index.html` forwards visitors to `dist/`, keeping the game's relative module and asset paths intact. `.nojekyll` disables Jekyll processing. Changes pushed to `main` are published by GitHub's built-in Pages pipeline. The separate `Validate TOUGE OVERDRIVE` Actions workflow runs syntax and physics/steering checks; its runner queue does not gate the branch publication. Find the canonical public website link in repository Settings → Pages.
+Public game: https://bd-cs1.github.io/touge-overdrive/
 
+Repository visibility is public. Pages uses **GitHub Actions** as its source. `.github/workflows/static.yml` runs on pushes to `main` and can also be started manually. It runs `npm run check` and `npm test`, then uploads **only `dist/`** and deploys it to the `github-pages` environment. Changes to the source on `main` are automatically checked and published. Check Settings → Pages or the Actions run for deployment status. GitHub service incidents can delay queued workflows or status updates.
+
+The root `index.html` is a convenience redirect for serving the repository locally; production serves `dist/index.html` directly from the uploaded artifact. Keep the relative paths in `dist/` so that the game works under the GitHub project subpath.
