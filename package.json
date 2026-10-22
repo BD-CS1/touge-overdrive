@@ -1,0 +1,11 @@
+{
+  "name": "touge-overdrive",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Original first-person 3D mountain racing in WebGL",
+  "scripts": {
+    "check": "node --check dist/game.js && node --check dist/world.js && node --check dist/renderer.js && node --check dist/race.js && node --check dist/audio.js && node --check dist/cockpit.js && node --check dist/software.js",
+    "test": "node tests/steering.mjs && node tests/physics.mjs"
+  }
+}
